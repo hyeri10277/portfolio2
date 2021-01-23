@@ -1,0 +1,177 @@
+@charset "utf-8";
+/*전체사이트 핵심공통*/
+
+
+/*웹폰트*/
+/*
+    Thin 100,Light 300,Regular 400,Medium 500,Bold 700,Black 900
+    normal?
+  */
+
+
+@font-face {
+    /*노토산스*/
+    font-family: noto;
+    src: url(../fonts/noto_thin.woff) format("woff"),
+        url(../fonts/noto_thin.ttf) format("truetype");
+    font-weight: 100;
+}
+
+@font-face {
+    /*노토산스*/
+    font-family: noto;
+    src: url(../fonts/noto_light.woff) format("woff"),
+        url(../fonts/noto_light.ttf) format("truetype");
+    font-weight: 200;
+}
+
+
+@font-face {
+    /*노토산스*/
+    font-family: noto;
+    src: url(../fonts/noto_nomal.woff) format("woff"),
+        url(../fonts/noto_nomal.woff) format("truetype");
+    font-weight: 300;
+}
+
+
+@font-face {
+    /*노토산스*/
+    font-family: noto;
+    src: url(../fonts/noto_regular.woff) format("woff"),
+        url(../fonts/noto_regular.woff) format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    /*노토산스*/
+    font-family: noto;
+    src: url(../fonts/noto_medium.woff) format("woff"),
+        url(../fonts/noto_medium.woff) format("truetype");
+    font-weight: 500;
+}
+
+
+@font-face {
+    /*노토산스*/
+    font-family: noto;
+    src: url(../fonts/noto_bold.woff) format("woff"),
+        url(../fonts/noto_bold.woff) format("truetype");
+    font-weight: 600;
+}
+
+@font-face {
+    /*노토산스*/
+    font-family: noto;
+    src: url(../fonts/noto_black.woff) format("woff"),
+        url(../fonts/noto_black.woff) format("truetype");
+    font-weight: 700;
+}
+
+
+
+
+@font-face {
+    /*LibreBaskerville*/
+    font-family: LibreBaskerville;
+    src: url(../fonts/LibreBaskerville-Regular.woff) format("woff"),
+        url(../fonts/LibreBaskerville-Regular.ttf) format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    /*LibreBaskerville*/
+    font-family: LibreBaskerville;
+    src: url(../fonts/LibreBaskerville-Bold.woff) format("woff"),
+        url(../fonts/LibreBaskerville-Bold.ttf) format("truetype");
+    font-weight: 700;
+}
+
+
+/*
+/*
+
+[ 웹폰트지정형식 ]
+@font-face {
+    font-family: 내가지은이름;
+    src: url(경로.woff) format("woff"),
+        url(경로.ttf) format("truetype")
+}
+- woff 는 데스크탑 브라우저용 웹폰트 확장자
+- ttf 는 모바일 브라우저용 웹폰트 확장자
+- format(형식명) 은 명시적으로 확장자를 지정하여 웹폰트 로딩을 빠르게함!
+
+*/
+
+/*사이트 전체설정*/
+body {
+
+    box-sizing: border-box;
+    font-family: noto;
+
+}
+
+/*IR(Image Replacement)-이미지설명요소 등 안보이게 처리*/
+.bld {
+    display: none;
+}
+
+
+/*2중박스 꼭 만들기*/
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    /*보이는 화면기준 100% 높이값기준필요
+            - 직계하위 요소에 %를 쓸경우 필수셋팅!*/
+    overflow-x: hidden;
+    /*동시에 잡아준다!*/
+    overflow-y: hidden;
+/*        overflow-y: auto;*/
+    /*       (가로 스크롤바가 나타나지 않을 뿐 브라우저에 따라 세로 스크롤바는 나타남)*/
+    /*동시에 잡아준다!*/
+    font-size: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 공통class */
+/*겉박스*/
+.page {
+    width: 100%;
+    height: 100%;
+    /*부모에 달라붙게 만드는것*/
+}
+
+/*속박스*/
+.inbox {
+    position: relative;
+    width: 1920px;
+    max-width: 100%;
+    /*1920px보다 작을때 벽에 붙게함*/
+    height: 100%;
+    margin: 0 auto;
+
+    /*    outline: 2px dotted red;*/
+
+}
+
+/*일반공통*/
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    /*기본폰트크기인 16px과 같아짐!*/
+}
